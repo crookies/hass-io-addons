@@ -40,4 +40,4 @@ RUN set -xe \
      && apk del --purge .build-dependencies
 
 # add local files
-COPY rootfs/hop /
+COPY rootfs /
