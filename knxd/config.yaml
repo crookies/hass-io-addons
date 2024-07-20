@@ -1,9 +1,9 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: KNXD daemon
-version: "0.4.7"
+version: "0.4.8"
 slug: knxd
 description: KNXD daemon you can use to create a KNX/IP gateway via TPUART or USB bus adapters
-url: https://github.com/da-anda/hass-io-addons/tree/main/knxd
+url: https://github.com/crookies/hass-io-addons/tree/main/knxd
 arch:
   - armhf
   - armv7
@@ -25,7 +25,7 @@ options:
   usb_filters: single
   ip_address: ""
   dest_port: "99"
-  custom_config: ""
+  custom_config: "/etc/crookies.ini"
 schema:
   address: "match(^\\d+\\.\\d+.\\d+$)"
   client_address: "match(^\\d+\\.\\d+.\\d+\\:\\d+$)"
