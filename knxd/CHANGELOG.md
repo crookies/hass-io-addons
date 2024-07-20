@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.4.8 
+
+- First version for Crookies 
+
 ## 0.4.7
 
 - bumped docker base image to 3.16 again
