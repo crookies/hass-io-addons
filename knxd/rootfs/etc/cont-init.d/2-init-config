@@ -10,8 +10,15 @@ readonly CONF="/etc/knxd.ini"
 if bashio::config.has_value 'custom_config' && [ $(bashio::string.length "$(bashio::config 'custom_config')") > 5 ]; then
 	bashio::log.info "Using custom configuration:"
 	bashio::log.info "$(bashio::config 'custom_config')"
+	# Get the filename from the custom_config parameter
+	filename=$(bashio::config 'custom_config')
+	# Get the content of the file
+	content=$(cat "$filename")
+	#write the content to the config file
+	#
+	
 	cat > ${CONF} << EOF
-$(bashio::config 'custom_config')
+$(content)
 EOF
 	exit 0
 fi
